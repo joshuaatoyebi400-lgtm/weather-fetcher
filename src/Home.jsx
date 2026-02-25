@@ -47,7 +47,7 @@ function fetchWeather(place) {
        setErrors([]);
      
 
-      fetch(`https://api.weatherapi.com/v1/forecast.json?ke=${API_KEY}&q=${place}&days=${DAYS}&aqi=no&alerts=no`)
+      fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${place}&days=${DAYS}&aqi=no&alerts=no`)
       .then(response =>  {
       if (!response.ok) {
         return response.json().then(errorData => {
